@@ -202,7 +202,9 @@ function Admin() {
 
     useEffect(() => {
         // setLoading(true)
-        fetch('http://127.0.0.1:3000/contactmsyt/contacts')
+       // fetch('http://127.0.0.1:3000/contactmsyt/contacts')
+       fetch('https://slm-software-api.vercel.app/contactmsyt/contacts')
+        
           .then(response => response.json())
           .then(data => {
             setContacts(data);
