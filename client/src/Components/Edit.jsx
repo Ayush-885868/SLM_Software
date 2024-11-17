@@ -11,7 +11,9 @@ function Edit() {
     const [data, setData] = useState([])
     const navigate = useNavigate();
     useEffect(() => {
-        axios.get('http://localhost:3001/posts/'+id)
+       // axios.get('http://localhost:3001/posts/'+id)
+       axios.get('https://slm-software-api.vercel.app/posts/'+id)
+       
             .then(res => setData(res.data))
             .catch(err => console.log(err))
 

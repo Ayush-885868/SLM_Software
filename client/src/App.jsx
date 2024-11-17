@@ -65,9 +65,10 @@ const router = createBrowserRouter([
 
 function App() {
   const [user, setUser] = useState(); //
+  axios.defaults.withCredentials = true; //##
   useEffect(()=>{                     //
     //axios.get('http://127.0.0.1:3000/contactmsyt/verify',{  //
-    axios.get('slm-software-api.vercel.app/contactmsyt/verify',{
+    axios.get('https://slm-software-api.vercel.app/contactmsyt/verify',{ 
     headers:{                                                      //
       Authorization:`Berear ${localStorage.getItem('token')}`       //
     }

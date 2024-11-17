@@ -37,14 +37,14 @@ const Register = () => {
 
 
 
-
+    axios.defaults.withCredentials = true; //##
     const handleSubmit = (e) => {
         e.preventDefault();
         const errs = Validation(values)
         setErrors(errs);
         if (errs.name === "" && errs.designation === "" && errs.email === "" && errs.password === "") {
             //axios.post('http://127.0.0.1:3000/contactmsyt/Register', values)
-            axios.post('slm-software-api.vercel.app/contactmsyt/Register',values)
+            axios.post('https://slm-software-api.vercel.app/contactmsyt/Register',values)
                 .then(res => {
                     if(res.data.success){
                     toast.success(`${values.name},Account Created Successfully.`, {
