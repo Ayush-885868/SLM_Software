@@ -16,7 +16,14 @@ import {errorMiddleware} from'./middleware/errorMiddleware';*/
 
 const app = express()
 app.use(express.json())
-app.use(cors());
+//app.use(cors());
+app.use(cors(
+    {
+        origin:["https://deploy-mern-1whq.vercel.app"],
+        methods:["POST", "GET"],
+        credentials:true
+    }
+));
 dotenv.config({path:"./config/.env"})
 /*app.use(cors({
     origin: ["http://localhost:5173"], credentials:true})
