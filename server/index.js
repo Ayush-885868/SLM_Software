@@ -37,6 +37,9 @@ app.use('/auth', UserRouter)*/
 app.use('/contactmsyt',Router )
 //const mongoose = require('mongoose');
 mongoose.connect(process.env.URI);
+app.get('/',(req,res)=>{
+    res.json("hello");
+})
 /*app.use(errorMiddleware);
 app.get('/',(req,res)=>{
     console.log("hello")
