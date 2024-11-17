@@ -15,7 +15,9 @@ function StatusForUser() {
 
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:3000/contactmsyt/installreqs', {
+        //axios.get('http://127.0.0.1:3000/contactmsyt/installreqs', {
+            axios.get('slm-software-api.vercel.app/contactmsyt/installreqs', {
+            
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }

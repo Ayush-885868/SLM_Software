@@ -122,7 +122,9 @@ function Admin() {
           }
       
           const updatedRow = { ...row, Status: e.target.value };
-          await axios.put(`http://127.0.0.1:3000/contactmsyt/records/${row._id}`, updatedRow, {
+          //await axios.put(`http://127.0.0.1:3000/contactmsyt/records/${row._id}`, updatedRow, {
+            await axios.put(`slm-software-api.vercel.app/contactmsyt/records/${row._id}`, updatedRow, {
+            
             headers: {
               Authorization: `Berear ${localStorage.getItem('token')}`,
             },
