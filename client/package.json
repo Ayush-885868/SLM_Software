@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build":"react-scripts build",
     "lint": "eslint . --ext js,j sx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "build-bootstrap": "npx webpack --config node_modules/bootstrap/build/scss-dist.js"
